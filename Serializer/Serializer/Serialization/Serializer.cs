@@ -237,7 +237,15 @@ namespace Assets.Serialization
         /// <param name="o">Object to serialize</param>
         private void WriteComplexObject(object o)
         {
-            throw new NotImplementedException("Fill me in");
+            if (o.GetHashCode != null)
+            {
+                Write("#");
+                GetId(o);
+            }
+            else {
+
+            }
+            
         }
     }
 }
