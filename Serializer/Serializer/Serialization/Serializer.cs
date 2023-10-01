@@ -190,28 +190,34 @@ namespace Assets.Serialization
             switch (o)
             {
                 case null:
-                    throw new NotImplementedException("Fill me in");
+                    Write("null");
+                    //throw new NotImplementedException("Fill me in");
                     break;
 
                 case int i:
-                    throw new NotImplementedException("Fill me in");
+                    Write(i);
+                    //throw new NotImplementedException("Int"+i);
                     break;
 
                 case float f:
-                    throw new NotImplementedException("Fill me in");
+                    Write(f);
+                    //throw new NotImplementedException("Fill me in");
                     break;
 
                 // Not: don't worry about handling strings that contain quote marks
                 case string s:
-                    throw new NotImplementedException("Fill me in");
+                    Write('\u0022' + s+ '\u0022');
+                    //throw new NotImplementedException("Fill me in");
                     break;
 
                 case bool b:
-                    throw new NotImplementedException("Fill me in");
+                    Write(b);
+                    //throw new NotImplementedException("Fill me in");
                     break;
 
                 case IList list:
-                    throw new NotImplementedException("Fill me in");
+                    WriteList(list);
+                    //throw new NotImplementedException("Fill me in");
                     break;
 
                 default:

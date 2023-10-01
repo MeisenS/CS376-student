@@ -1,0 +1,12 @@
+/Users/meisen/CS376-student/Serializer/Serializer/bin/Debug/net6.0/Serializer.deps.json
+/Users/meisen/CS376-student/Serializer/Serializer/bin/Debug/net6.0/Serializer.dll
+/Users/meisen/CS376-student/Serializer/Serializer/bin/Debug/net6.0/Serializer.pdb
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.csproj.AssemblyReference.cache
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.AssemblyInfoInputs.cache
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.AssemblyInfo.cs
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.csproj.CoreCompileInputs.cache
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.dll
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/refint/Serializer.dll
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/Serializer.pdb
+/Users/meisen/CS376-student/Serializer/Serializer/obj/Debug/net6.0/ref/Serializer.dll
