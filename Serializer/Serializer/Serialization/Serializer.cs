@@ -192,33 +192,33 @@ namespace Assets.Serialization
             {
                 case null:
                     Write("null");
-                    //throw new NotImplementedException("Fill me in");
+                    
                     break;
 
                 case int i:
                     Write(i);
-                    //throw new NotImplementedException("Int"+i);
+                    
                     break;
 
                 case float f:
                     Write(f);
-                    //throw new NotImplementedException("Fill me in");
+                    
                     break;
 
                 // Not: don't worry about handling strings that contain quote marks
                 case string s:
                     Write('\u0022' + s+ '\u0022');
-                    //throw new NotImplementedException("Fill me in");
+                    
                     break;
 
                 case bool b:
                     Write(b);
-                    //throw new NotImplementedException("Fill me in");
+                    
                     break;
 
                 case IList list:
                     WriteList(list);
-                    //throw new NotImplementedException("Fill me in");
+                    
                     break;
 
                 default:
@@ -240,15 +240,22 @@ namespace Assets.Serialization
         {
             
             if (idTable.ContainsKey(o)) {
-                Write(idTable[o]);
+                Write("#"+idTable[o]);
             }
             else
             {
+
                 (int a, bool b) = GetId(o);
-                foreach (KeyValuePair<string, object> key in Utilities.SerializedFields(o))
+                IEnumerable olist = Utilities.SerializedFields(o);
+                Write("#" + a);
+                String str = o.GetType().ToString();
+                Write("{type:\u0022" + str.Substring(str.LastIndexOf('.') + 1)+ '\u0022');
+                foreach (KeyValuePair<string, object> key in olist)
                 {
-                    WriteField(key.Key, key.Value, b);
+                    Write(",");
+                    WriteField(key.Key,key.Value, b);
                 }
+                Write("}");
             }
             
         }
