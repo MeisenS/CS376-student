@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using FakeUnity;
 
 namespace Assets.Serialization
 {
@@ -237,13 +238,17 @@ namespace Assets.Serialization
         /// <param name="o">Object to serialize</param>
         private void WriteComplexObject(object o)
         {
-            if (o.GetHashCode != null)
-            {
-                Write("#");
-                GetId(o);
+            
+            if (idTable.ContainsKey(o)) {
+                Write(idTable[o]);
             }
-            else {
-
+            else
+            {
+                (int a, bool b) = GetId(o);
+                foreach (KeyValuePair<string, object> key in Utilities.SerializedFields(o))
+                {
+                    WriteField(key.Key, key.Value, b);
+                }
             }
             
         }
